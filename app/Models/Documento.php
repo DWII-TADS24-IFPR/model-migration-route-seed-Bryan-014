@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Categoria;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Documento extends Model
 {
+    protected $table = 'documentos';
+
     protected $fillable = [
         'url',
         'descricao',
@@ -14,4 +18,8 @@ class Documento extends Model
         'comentario',
         'horas_out',
     ];
+
+    public function categorias() {
+        return $this->belongsTo(Categoria::class);
+    }
 }

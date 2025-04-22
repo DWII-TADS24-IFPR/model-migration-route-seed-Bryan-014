@@ -2,7 +2,6 @@
 
 namespace App\Http\Controlers;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ComprovanteController;
@@ -11,14 +10,6 @@ use App\Http\Controllers\DeclaracaoController;
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\NivelController;
 use App\Http\Controllers\TurmaController;
-
-Route::get('/pessoas', [PessoaController::class, 'index'])->name('pessoas.index');
-Route::get('/pessoas/create', [PessoaController::class, 'create'])->name('pessoas.create');
-Route::get('/pessoas/show/{id}', [PessoaController::class, 'show'])->name('pessoas.show');
-Route::get('/pessoas/edit/{id}', [PessoaController::class, 'edit'])->name('pessoas.edit');
-Route::post('/pessoas/store', [PessoaController::class, 'store'])->name('pessoas.store');
-Route::post('/pessoas/update', [PessoaController::class, 'update'])->name('pessoas.update');
-Route::post('/pessoas/destroy', [PessoaController::class, 'destroy'])->name('pessoas.destroy');
 
 Route::get('/alunos', [AlunoController::class, 'index'])->name('alunos.index');
 Route::get('/alunos/create', [AlunoController::class, 'create'])->name('alunos.create');
